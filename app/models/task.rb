@@ -8,14 +8,6 @@ class Task < ApplicationRecord
   validates :description, length: { maximum: 500 }
 
   state_machine initial: :new_task do
-    # state :new_task
-    # state :in_development
-    # state :in_qa
-    # state :in_code_review
-    # state :ready_for_release
-    # state :released
-    # state :archived
-
     event :archive do
       transition [:new_task, :released] => :archived
     end
