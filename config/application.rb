@@ -1,5 +1,5 @@
 require_relative "boot"
-
+config.assets.paths << Rails.root.join('node_modules')
 require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
