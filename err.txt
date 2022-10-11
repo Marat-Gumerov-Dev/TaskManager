@@ -1,0 +1,57 @@
+Run options: --seed 11607
+
+# Running:
+
+...E
+
+Error:
+Web::SessionsControllerTest#test_should_post_create:
+NoMethodError: undefined method `sign_in' for #<Web::SessionsController:0x00000000008318>
+    app/controllers/web/sessions_controller.rb:10:in `create'
+    test/controllers/web/sessions_controller_test.rb:16:in `block in <class:SessionsControllerTest>'
+
+rails test test/controllers/web/sessions_controller_test.rb:9
+
+E
+
+Error:
+Web::SessionsControllerTest#test_should_get_new:
+ActionView::Template::Error: couldn't find file 'material-design-lite/material.min.css' with type 'text/css'
+Checked in these paths: 
+  /task_manager/app/assets/config
+  /task_manager/app/assets/images
+  /task_manager/app/assets/stylesheets
+  /bundle_cache/ruby/2.7.0/gems/actioncable-6.1.7/app/assets/javascripts
+  /bundle_cache/ruby/2.7.0/gems/activestorage-6.1.7/app/assets/javascripts
+  /bundle_cache/ruby/2.7.0/gems/actionview-6.1.7/lib/assets/compiled
+  /task_manager/node_modules
+  /task_manager/node_modules
+    app/assets/stylesheets/application.css:1
+    app/views/layouts/application.html.slim:9
+    test/controllers/web/sessions_controller_test.rb:5:in `block in <class:SessionsControllerTest>'
+
+rails test test/controllers/web/sessions_controller_test.rb:4
+
+E
+
+Error:
+Web::SessionsControllerTest#test_should_delete_destroy:
+NameError: undefined local variable or method `sign_out' for #<Web::SessionsController:0x00000000008458>
+    app/controllers/web/sessions_controller.rb:18:in `destroy'
+    test/controllers/web/sessions_controller_test.rb:21:in `block in <class:SessionsControllerTest>'
+
+rails test test/controllers/web/sessions_controller_test.rb:20
+
+E
+
+Error:
+Web::BoardsControllerTest#test_should_get_new:
+RuntimeError: @controller is nil: make sure you set it in your test's setup method.
+    test/controllers/web/boards_controller_test.rb:5:in `block in <class:BoardsControllerTest>'
+
+rails test test/controllers/web/boards_controller_test.rb:4
+
+..
+
+Finished in 0.281756s, 31.9425 runs/s, 17.7458 assertions/s.
+9 runs, 5 assertions, 0 failures, 4 errors, 0 skips
